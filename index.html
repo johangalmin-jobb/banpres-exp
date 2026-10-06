@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Skärmpresentation</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; overflow: hidden; background-color: #000; }
+    iframe { width: 100vw; height: 100vh; border: none; display: block; }
+  </style>
+  <script>
+    // Laddar om BARA presentationen var 15:e minut (900 000 ms)
+    setInterval(function() {
+      var iframe = document.getElementById('slideFrame');
+      iframe.src = iframe.src;
+    }, 100000);
+  </script>
+</head>
+<body>
+  <iframe id="slideFrame" src="https://docs.google.com/presentation/d/e/2PACX-1vSzjd9-KwM2Itcj9cnKrFw16BEQNbZCvgxG84p1GKuqgrfYl15FeyEk_zjK0VSABDJgpu6-sSxGlmk-/embed?start=true&loop=true&delayms=2000&rm=minimal"></iframe>
+</body>
+</html>
